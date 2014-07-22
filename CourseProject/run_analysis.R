@@ -17,24 +17,24 @@ changename=function(name){
     if (grepl('mean',name)) {str1='mean'
     }else if (grepl('std',name)) str1='sdev'
     
-    if (grepl('tBodyAcc',name)) {str2='body.lin.acc.time'
-    }else if (grepl('tGravityAcc',name)) {str2='gravity.lin.acc.time'
-    }else if (grepl('tBodyAccJerk',name)) {str2='body.lin.vel.time'
-    }else if (grepl('tBodyGyro',name)) {str2='body.ang.acc.time'
-    }else if (grepl('tBodyGyroJerk',name)) {str2='body.ang.vel.time'
-    }else if (grepl('tBodyAccMag',name)) {str2='body.lin.acc.time.mag'                                       
-    }else if (grepl('tGravityAccMag',name)) {str2='gravity.lin.acc.time.mag'
-    }else if (grepl('tBodyAccJerkMag',name)) {str2='body.lin.vel.time.mag'
-    }else if (grepl('tBodyGyroMag',name)) {str2='body.ang.acc.time.mag'
-    }else if (grepl('tBodyGyroJerkMag',name)) {str2='body.ang.vel.time.mag'                                         
-    }else if (grepl('fBodyAcc',name)) {str2='body.lin.acc.freq'
-    }else if (grepl('fBodyAccJerk',name)) {str2='body.lin.vel.freq'
-    }else if (grepl('fBodyGyro',name)) {str2='body.ang.acc.freq'
-    }else if (grepl('fBodyGyroJerk',name)) {str2='body.ang.vel.freq'
-    }else if (grepl('fBodyAccMag',name)) {str2='body.lin.acc.freq.mag'                                       
-    }else if (grepl('fBodyBodyAccJerkMag',name)) {str2='body.lin.vel.freq.mag'
-    }else if (grepl('fBodyBodyGyroMag',name)) {str2='body.ang.acc.freq.mag'
-    }else if (grepl('fBodyBodyGyroJerkMag',name)) str2='body.ang.vel.freq.mag'
+    if (grepl('tBodyAcc[^jerkmag]',name,ignore.case=T)) {str2='body.lin.acc.time'
+    }else if (grepl('tGravityAcc[^jerkmag]',name,ignore.case=T)) {str2='gravity.lin.acc.time'
+    }else if (grepl('tBodyAccJerk[^mag]',name,ignore.case=T)) {str2='body.lin.vel.time'
+    }else if (grepl('tBodyGyro[^jerkmag]',name,ignore.case=T)) {str2='body.ang.acc.time'
+    }else if (grepl('tBodyGyroJerk[^mag]',name,ignore.case=T)) {str2='body.ang.vel.time'
+    }else if (grepl('tBodyAccMag',name,ignore.case=T)) {str2='body.lin.acc.time.mag'                                       
+    }else if (grepl('tGravityAccMag',name,ignore.case=T)) {str2='gravity.lin.acc.time.mag'
+    }else if (grepl('tBodyAccJerkMag',name,ignore.case=T)) {str2='body.lin.vel.time.mag'
+    }else if (grepl('tBodyGyroMag',name,ignore.case=T)) {str2='body.ang.acc.time.mag'
+    }else if (grepl('tBodyGyroJerkMag',name,ignore.case=T)) {str2='body.ang.vel.time.mag'                                         
+    }else if (grepl('fBodyAcc[^jerkmag]',name,ignore.case=T)) {str2='body.lin.acc.freq'
+    }else if (grepl('fBodyAccJerk[^mag]',name,ignore.case=T)) {str2='body.lin.vel.freq'
+    }else if (grepl('fBodyGyro[^jerkmag]',name,ignore.case=T)) {str2='body.ang.acc.freq'
+    }else if (grepl('fBodyGyroJerk[^mag]',name,ignore.case=T)) {str2='body.ang.vel.freq'
+    }else if (grepl('fBodyAccMag',name,ignore.case=T)) {str2='body.lin.acc.freq.mag'                                       
+    }else if (grepl('fBodyBodyAccJerkMag',name,ignore.case=T)) {str2='body.lin.vel.freq.mag'
+    }else if (grepl('fBodyBodyGyroMag',name,ignore.case=T)) {str2='body.ang.acc.freq.mag'
+    }else if (grepl('fBodyBodyGyroJerkMag',name,ignore.case=T)) str2='body.ang.vel.freq.mag'
     
     if (grepl('X',name)) {str3='X.dir'
     }else if (grepl('Y',name)) {str3='Y.dir'
@@ -157,6 +157,6 @@ changename=function(name){
     
     rm(list=ls())
 
-    message('Run Analysis successful....')
+    message('Run Analysis successful....output files saved to working directory')
 
     
