@@ -15,17 +15,22 @@ A R-script “__*run_analysis.R*__” generates two text files “__*data_mean_s
 
 **data_mean_std_desc.txt** has *68 variables x 10299 observations*. These 68 variables are the mean and 
 standard deviation variables from the base data set with the activity no and their descriptions 
-merged to the mean and standard deviation variables extracted from the base data set. Word Key for
+merged to the mean and standard deviation variables extracted from the base data set. **Word** **Key** for
 the 68 variable names are as:
 
--------------------------------------------------------|---------------------------------
-**mean** – mean value of the variable		       |**acc** – Acceleration
--------------------------------------------------------|---------------------------------					**sdev** – Standard deviation of the variable	       |**vel** – Velocity
--------------------------------------------------------|---------------------------------					**body** – Data is related to body or person	       |**time** – Time domain
--------------------------------------------------------|---------------------------------					**gravity** – Gravity acceleration data		       |**freq** – Frequency domain
--------------------------------------------------------|---------------------------------					**lin** – Linear value				       |**X,Y,Z** – Direction X, Y or Z
--------------------------------------------------------|---------------------------------					**ang** – Angular value				       |	
--------------------------------------------------------|---------------------------------
+
+1. **mean** – mean value of the variable
+2. **acc** – Acceleration
+3. **sdev** – Standard deviation of the variable
+4. **vel** – Velocity
+5. **body** – Data is related to body or person
+6. **time** – Time domain
+7. **gravity** – Gravity acceleration data
+8. **freq** – Frequency domain
+9. **lin** – Linear value
+10. **X,Y,Z** – Direction X, Y or Z
+11. **ang** – Angular value
+
 
 **tidy-data.txt** has *563 variables x 54 observations*. These 563 variables are activity number, subject
 and all the 561 variables as described in the feature.txt document on the UCI data. The 54 observations are
