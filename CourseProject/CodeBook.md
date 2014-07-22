@@ -1,5 +1,5 @@
-                                            Code Book
-                                            =========
+Code Book
+=========
 
 This book provides explanatory notes on the data sets generated as part of the Course Project assignment for 
 **Getting and Cleaning Data** course on **Coursera**. 
@@ -11,19 +11,20 @@ by:
 on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient 
 Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012.
 
-A R-script “run_analysis.R” generates two text files “**data_mean_std_desc.txt**” and “**tidy_data.txt**”.  
+A R-script “__*run_analysis.R*__” generates two text files “__*data_mean_std_desc.txt*__” and “__*tidy_data.txt*__”.  
 
 **data_mean_std_desc.txt** has *68 variables x 10299 observations*. These 68 variables are the mean and 
 standard deviation variables from the base data set with the activity no and their descriptions 
 merged to the mean and standard deviation variables extracted from the base data set. Word Key for
 the 68 variable names are as:
 
-**mean** – mean value of the variable	|**acc** – Acceleration
-**sdev** – Standard deviation of the variable	|**vel** – Velocity
-**body** – Data is related to body or person	|**time** – Time domain
-**gravity** – Gravity acceleration data	|**freq** – Frequency domain
-**lin** – Linear value	|**X,Y,Z** – Direction X, Y or Z
-**ang** – Angular value	
+:------------------------------------------------|:-------------------------
+|**mean** – mean value of the variable	|**acc** – Acceleration
+|**sdev** – Standard deviation of the variable	|**vel** – Velocity
+|**body** – Data is related to body or person	|**time** – Time domain
+|**gravity** – Gravity acceleration data	|**freq** – Frequency domain
+|**lin** – Linear value	|**X,Y,Z** – Direction X, Y or Z
+|**ang** – Angular value
 
 
 **tidy-data.txt** has *563 variables x 54 observations*. These 563 variables are activity number, subject
@@ -32,8 +33,9 @@ the mean of each of the variable by activity and by subject.
  
 
                           **Data Dictionary** - *data_mean_std_desc.txt*
-                          ----------------------------------------
-Col No.	|Column Name	|Column Name Detailed Explanation
+
+Col No.	|Column Name			|Column Name Detailed Explanation
+:-------|:------------------------------|:-------------------------------------------------------------------------
 1	|activity.no	|Activity number designation
 2	|mean.body.lin.acc.time.X.dir	|Time domain mean body linear acceleration in direction X
 3	|mean.body.lin.acc.time.Y.dir	|Time domain mean body linear acceleration in direction Y
@@ -104,9 +106,10 @@ Col No.	|Column Name	|Column Name Detailed Explanation
 68	|activity	|Activity name
  
                                     **Data Dictionary** – *tidy_data.txt*
-                                    -------------------------------------
+
 		
 Col No.	|Column Name	|Column Name Detailed Explanation
+:-------|:--------------|:--------------------------------
 1	|activity.no	|Activity number
 2	|subject	|Subject number
 V1-V561	|Variables as defined in feature.txt on UCI
