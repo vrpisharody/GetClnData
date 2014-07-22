@@ -18,14 +18,14 @@ standard deviation variables from the base data set with the activity no and the
 merged to the mean and standard deviation variables extracted from the base data set. Word Key for
 the 68 variable names are as:
 
-
+-----------------------------------------------         ---------------------------------
 **mean** – mean value of the variable			**acc** – Acceleration
 **sdev** – Standard deviation of the variable		**vel** – Velocity
 **body** – Data is related to body or person		**time** – Time domain
 **gravity** – Gravity acceleration data			**freq** – Frequency domain
 **lin** – Linear value					**X,Y,Z** – Direction X, Y or Z
 |**ang** – Angular value
-
+----------------------------------------------          ---------------------------------
 
 **tidy-data.txt** has *563 variables x 54 observations*. These 563 variables are activity number, subject
 and all the 561 variables as described in the feature.txt document on the UCI data. The 54 observations are
