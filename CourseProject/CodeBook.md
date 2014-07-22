@@ -18,12 +18,12 @@ standard deviation variables from the base data set with the activity no and the
 merged to the mean and standard deviation variables extracted from the base data set. Word Key for
 the 68 variable names are as:
 
-:------------------------------------------------|:-------------------------
-|**mean** – mean value of the variable	|**acc** – Acceleration
-|**sdev** – Standard deviation of the variable	|**vel** – Velocity
-|**body** – Data is related to body or person	|**time** – Time domain
-|**gravity** – Gravity acceleration data	|**freq** – Frequency domain
-|**lin** – Linear value	|**X,Y,Z** – Direction X, Y or Z
+
+**mean** – mean value of the variable			**acc** – Acceleration
+**sdev** – Standard deviation of the variable		**vel** – Velocity
+**body** – Data is related to body or person		**time** – Time domain
+**gravity** – Gravity acceleration data			**freq** – Frequency domain
+**lin** – Linear value					**X,Y,Z** – Direction X, Y or Z
 |**ang** – Angular value
 
 
@@ -32,7 +32,7 @@ and all the 561 variables as described in the feature.txt document on the UCI da
 the mean of each of the variable by activity and by subject.
  
 
-                          **Data Dictionary** - *data_mean_std_desc.txt*
+                                **Data Dictionary** - *data_mean_std_desc.txt*
 
 Col No.	|Column Name			|Column Name Detailed Explanation
 :-------|:------------------------------|:-------------------------------------------------------------------------
