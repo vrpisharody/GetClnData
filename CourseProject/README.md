@@ -1,7 +1,7 @@
 Course Project:
 ===============
 
-This course project has three files on this repo. They are:
+This project is in completion of the Course Part assignment of Getting and Cleaning Data course on Coursera. This course project has three files on this repo. They are:
 
 1. run_analysis.R
 2. data_mean_std_desc.txt
@@ -31,7 +31,7 @@ to set the column names to its default in the data set loaded in the first secti
 and dcast operations. Activity number data set created in the third section is merged using **cbind**. The subject test and
 training data set read in in the first section is merged using **rbind** and the merged subject data set is then merged to the 
 primary data set using **cbind**. The **melt** function from **reshape2** is then used to melt the data set on *activity+subject*.
-The **dcast** function is then used to recast the data set with the mean of the variables. This data set is then written to the
+The **dcast** function is then used to recast the data set with the mean of the variables. Subsequently, the names in the feature file is written as names of the last 561 columns of the generated data set. This data set is then written to the
 working directory using **write.table** as *tidy_data.txt*.
 
 Finally *rm(list=ls())* command is used to clean the environment. Messages at the beginning of the program and end of the program
