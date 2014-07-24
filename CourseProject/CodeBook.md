@@ -117,4 +117,4 @@ Col No.	|Column Name	|Column Name Detailed Explanation
 :-------|:--------------|:--------------------------------
 1	|activity.no	|Activity number
 2	|subject	|Subject number
-V1-V561	|Variables as defined in feature.txt on UCI
+3-563	|Variables as defined in feature.txt on UCI
