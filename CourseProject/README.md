@@ -6,6 +6,7 @@ This project is in completion of the Course Project assignment of Getting and Cl
 1. run_analysis.R
 2. data_mean_std_desc.txt
 3. tidy_data.txt
+4. CodeBook.md
 
 The __*run_analysis.R*__ script file is organized in to five sections in line with the assignment requirements.
 
