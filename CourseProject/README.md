@@ -1,7 +1,7 @@
 Course Project:
 ===============
 
-This project is in completion of the Course Project assignment of Getting and Cleaning Data course on Coursera. This course project has three files on this repo. They are:
+This project is in completion of the Course Project assignment of Getting and Cleaning Data course on Coursera. This course project has four files on this repo. They are:
 
 1. run_analysis.R
 2. data_mean_std_desc.txt
