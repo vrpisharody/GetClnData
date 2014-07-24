@@ -153,6 +153,8 @@ changename=function(name){
     
     data.merge=dcast(data.merge,activity.no+subject~variable,mean) # Recast with mean
     
+    names(data.merge)[3:563]=as.character(feature[,2])
+
     write.table(data.merge,'tidy_data.txt')
     
     rm(list=ls())
