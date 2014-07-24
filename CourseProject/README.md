@@ -22,7 +22,7 @@ activity number column to the main data set created in the second section. The a
 is named identical as 'activity.no' and these columns are used to merge the main data set with the activity label data. The 
 **merge-by** function is used to merge the data sets on the column **'activity.no'**. 
 
-The fourth section uses a *user defined function* - **changename** is used to rename the 66 variables extracted in the 
+The fourth section uses a *user defined function* - **changename** to rename the 66 variables extracted in the 
 second section with descriptive names. The final data set of *68 variables x 10299 observations* is written to the 
 working directory as *data_mean_std_desc.txt* using **write.table**.
 
