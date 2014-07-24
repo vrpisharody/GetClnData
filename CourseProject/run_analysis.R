@@ -12,39 +12,9 @@
 
 # Define function to change col names
 
-changename=function(name){
-    
-    if (grepl('mean',name)) {str1='mean'
-    }else if (grepl('std',name)) str1='sdev'
-    
-    if (grepl('tBodyAcc[^jerkmag]',name,ignore.case=T)) {str2='body.lin.acc.time'
-    }else if (grepl('tGravityAcc[^jerkmag]',name,ignore.case=T)) {str2='gravity.lin.acc.time'
-    }else if (grepl('tBodyAccJerk[^mag]',name,ignore.case=T)) {str2='body.lin.vel.time'
-    }else if (grepl('tBodyGyro[^jerkmag]',name,ignore.case=T)) {str2='body.ang.acc.time'
-    }else if (grepl('tBodyGyroJerk[^mag]',name,ignore.case=T)) {str2='body.ang.vel.time'
-    }else if (grepl('tBodyAccMag',name,ignore.case=T)) {str2='body.lin.acc.time.mag'                                       
-    }else if (grepl('tGravityAccMag',name,ignore.case=T)) {str2='gravity.lin.acc.time.mag'
-    }else if (grepl('tBodyAccJerkMag',name,ignore.case=T)) {str2='body.lin.vel.time.mag'
-    }else if (grepl('tBodyGyroMag',name,ignore.case=T)) {str2='body.ang.acc.time.mag'
-    }else if (grepl('tBodyGyroJerkMag',name,ignore.case=T)) {str2='body.ang.vel.time.mag'                                         
-    }else if (grepl('fBodyAcc[^jerkmag]',name,ignore.case=T)) {str2='body.lin.acc.freq'
-    }else if (grepl('fBodyAccJerk[^mag]',name,ignore.case=T)) {str2='body.lin.vel.freq'
-    }else if (grepl('fBodyGyro[^jerkmag]',name,ignore.case=T)) {str2='body.ang.acc.freq'
-    }else if (grepl('fBodyGyroJerk[^mag]',name,ignore.case=T)) {str2='body.ang.vel.freq'
-    }else if (grepl('fBodyAccMag',name,ignore.case=T)) {str2='body.lin.acc.freq.mag'                                       
-    }else if (grepl('fBodyBodyAccJerkMag',name,ignore.case=T)) {str2='body.lin.vel.freq.mag'
-    }else if (grepl('fBodyBodyGyroMag',name,ignore.case=T)) {str2='body.ang.acc.freq.mag'
-    }else if (grepl('fBodyBodyGyroJerkMag',name,ignore.case=T)) str2='body.ang.vel.freq.mag'
-    
-    if (grepl('X',name)) {str3='X.dir'
-    }else if (grepl('Y',name)) {str3='Y.dir'
-    }else if (grepl('Z',name)) str3='Z.dir'                                         
-    
-    if (exists('str3')){
-        result=paste(str1,str2,str3,sep='.')
-    } else {result=paste(str1,str2,sep='.')}
-    
-}
+changename=function(col.name){
+         paste(names(unlist(sapply(srch.list,function(x) grep(x,col.name,value=T)))),collapse='.')
+     }
 
 
 # Assignment No. 1: Merge and create one data set of training and test data set
@@ -122,6 +92,14 @@ changename=function(name){
     #               time=time domain, freq=frequency domain, mag=magnitude
     #               X.dir=X direction, Y.dir=Y direction, Z.dir=Z direction
     
+    srch.list=c('mean()','std()','Body','Gravity','Gyro','Acc', 
+    '[jJ]erk','Gyro[^jJerk]|Acc[^jJerk]','t','f','Mag','X','Y','Z') #define search strings
+
+    out.string=c('mean','std','body','gravity','ang','lin','vel','acc','time','freq', 
+    'mag','X.dir','Y.dir','Z.dir') #define output string for each search string
+    
+    names(srch.list)=out.string #name each search string with the related output string
+
     name.label=names(data.merge.sub)[2:67] # Extract the relevant col names
     
     desc.label=unlist(sapply(name.label,changename)) # change the names.*changename*-user defined
